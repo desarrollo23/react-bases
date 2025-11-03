@@ -16,7 +16,7 @@ function FirstStepApp() {
             {products.map((product: Product) => (
                 <ItemCounter
                     key={product.Name}
-                    Products={product}
+                    Product={product}
                 />
             ))}
         </>

@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { ItemProps } from "./Model/Interfaces/ItemProps";
+// import './ItemCouter.css';
+import myCss from './ItemCouter.module.css';
 
-export const ItemCounter = ({ Products }: ItemProps) => {
+export const ItemCounter = ({ Product }: ItemProps) => {
 
-    const [count, setCount] = useState(Products.Amount);
+    const [count, setCount] = useState(Product.Amount);
 
     const handleClickAdd = () => {
         setCount(count + 1);
@@ -18,17 +20,9 @@ export const ItemCounter = ({ Products }: ItemProps) => {
     }
 
     return (
-        <section
-            style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 10
-            }}>
-            <span
-                style={{
-                    width: 150
-                }}>
-                {Products.Name ?? 'UnNamed'}
+        <section className={myCss.itemCounter}>
+            <span className={myCss.itemText}>
+                {Product.Name ?? 'UnNamed'}
             </span>
             <button
                 onClick={handleClickSubtract}>

@@ -1,0 +1,10 @@
+.item-counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-text {
+    color: blueviolet;
+    width: 150px;
+}

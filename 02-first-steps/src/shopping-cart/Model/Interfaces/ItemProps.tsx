@@ -1,5 +1,5 @@
 import { Product } from "./Products";
 
 export interface ItemProps {
-    Products: Product
+    Product: Product
 }
